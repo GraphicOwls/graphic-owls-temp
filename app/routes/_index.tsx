@@ -1,48 +1,38 @@
-import type { MetaFunction } from "@remix-run/node";
+/** @format */
+
+import type { MetaFunction } from '@remix-run/node'
+import Logo from '../components/logo'
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
+	return [
+		{ title: 'Graphic Owls – Webflow Design & Development' },
+		{
+			name: 'description',
+			content: 'Custom website design & development for Webflow.',
+		},
+	]
+}
 
 export default function Index() {
-  return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
-  );
+	return (
+		<div className='font-sans p-4 text-center flex flex-col items-center justify-center'>
+			<div className='max-w-[220px] grid place-items-center'>
+				<Logo />
+				<h1 className='text-3xl font-bold mt-3'>Graphic Owls</h1>
+			</div>
+			<div className='mt-6 max-w-[540px] flex flex-col items-center justify-center gap-8'>
+				<p className='text-zinc-400 w-full font-light'>
+					Graphic Owls is in the process of rebranding. We are accepting limited
+					projects. However, if you have any questions or need help with your
+					Webflow project, feel free to send us a message.
+				</p>
+				<a
+					className='px-6 py-3 leading-none bg-white rounded-md text-zinc-950 border border-white font-medium hover:bg-transparent hover:text-white transition-colors duration-300'
+					href='mailto:hello@graphicowls.com'
+				>
+					hello@graphicowls.com
+				</a>
+			</div>
+		</div>
+	)
 }
